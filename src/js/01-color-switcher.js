@@ -19,5 +19,5 @@ btnStartEl.addEventListener('click', event => {
 });
 
 function changeFone() {
-  bodyEl.style = `background-color:${getRandomHexColor()};`;
+  bodyEl.style = `background-color:${getRandomHexColor()}; transition: background-color 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67)`;
 }
