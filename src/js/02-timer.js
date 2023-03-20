@@ -20,6 +20,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 ref.button.disabled = true;
 let eventTime = 0;
+let differenceTime = 0;
 
 flatpickr(ref.input, {
   enableTime: true,
