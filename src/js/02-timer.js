@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 const ref = {
   input: document.querySelector('#datetime-picker'),
   button: document.querySelector('button[data-start'),
@@ -33,7 +35,7 @@ flatpickr(ref.input, {
     differenceTime = eventTime.getTime() - new Date().getTime();
 
     if (differenceTime <= 0) {
-      window.alert('Please choose a date in the future');
+      Notiflix.Notify.failure('Please choose a date in the future');
       return;
     }
     ref.button.disabled = false;
