@@ -35,16 +35,17 @@ formEl.addEventListener('submit', event => {
         }, delayArr);
       });
 
-      promise.then(() => {
-        Notiflix.Notify.success(
-          `✅ Fulfilled promise ${i + 1} in ${delayArr}ms`
-        );
-      });
-      promise.catch(() => {
-        Notiflix.Notify.failure(
-          `❌ Rejected promise ${i + 1} in ${delayArr}ms`
-        );
-      });
+      promise
+        .then(() => {
+          Notiflix.Notify.success(
+            `✅ Fulfilled promise ${i + 1} in ${delayArr}ms`
+          );
+        })
+        .catch(() => {
+          Notiflix.Notify.failure(
+            `❌ Rejected promise ${i + 1} in ${delayArr}ms`
+          );
+        });
     }
   }
   formEl.reset();
